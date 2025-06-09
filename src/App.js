@@ -23,12 +23,12 @@ function App() {
     setLoading(true);
     try {
 
-          console.log("Uploading formData:", formData);
-          
-      const response = await fetch("http://railsetu.in:5000/convert/pdf", {
-        method: "POST",
-        body: formData,
-      });
+  const response = await fetch("/convert/pdf", {
+  method: "POST",
+  body: formData,
+});
+
+     
 
       if (!response.ok) throw new Error("Conversion failed");
 

@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/convert/pdf"
+  to = "http://railsetu.in:5000/convert/pdf"
+  status = 200
+  force = true
