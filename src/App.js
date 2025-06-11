@@ -7,9 +7,7 @@ function App() {
 
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
-    // setFile(e.target.files);
-
-    // console.log("Selected file:", e.target.files[0]);
+ 
   };
 
   const handleUpload = async () => {
@@ -22,12 +20,11 @@ function App() {
 
     setLoading(true);
     try {
-
-  const response = await fetch("/convert/pdf", {
-  method: "POST",
-  body: formData,
-});
-
+     
+       const response = await fetch("https://railsetu.in:5000/convert/pdf", {
+       method: "POST",
+        body: formData,
+       });
      
 
       if (!response.ok) throw new Error("Conversion failed");
